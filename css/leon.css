@@ -1,0 +1,168 @@
+/* Start Variables */
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+}
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Responsive Container */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+/* Start Components */
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+  .special-heading + p {
+    margin-top: -20px;
+  }
+}
+/* End Components */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+  position: relative;
+  top: 15px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.icon {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  top: 5px;
+}
+
+.icon span {
+  position: absolute;
+  width: 27px;
+  height: 2px;
+  background-color: black;
+}
+
+.icon span:nth-child(2) {
+  width: 15px;
+  top: 5px;
+  transition: 0.3s;
+}
+
+.icon span:nth-child(3) {
+  top: 11px;
+}
+
+.icon span:nth-child(2):hover {
+  width: 27px;
+}
+
+.links ul {
+  list-style: none;
+  position: absolute;
+  top: calc(100% + 15px);
+  background-color: #f6f6f6;
+  padding: 0;
+  display: none;
+}
+
+.links ul li {
+  padding: 20px 50px 20px 10px;
+  border-bottom: 1px solid #b4b4b4;
+  transition: 0.3s;
+}
+
+.links:hover ul {
+  display: block;
+}
+
+.links ul li:first-child {
+  padding-top: 10px;
+}
+
+.links ul li::before {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  border-style: solid;
+  border-width: 7px;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: relative;
+  left: 98px;
+  top: -23px;
+}
+
+.links ul li a {
+  color: black;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  display: inline-block;
+}
+
+.links ul li a:hover {
+  transform: translateX(20px);
+  /* color: red !important; */
+}
+
+.links ul li:last-child {
+  border-bottom: none;
+}
