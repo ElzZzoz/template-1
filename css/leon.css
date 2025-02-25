@@ -67,10 +67,12 @@ body {
 }
 /* End Components */
 
+/* start header */
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -96,7 +98,7 @@ body {
 .icon span {
   position: absolute;
   width: 27px;
-  height: 2px;
+  height: 1px;
   background-color: black;
 }
 
@@ -121,6 +123,8 @@ body {
   background-color: #f6f6f6;
   padding: 0;
   display: none;
+  z-index: 1;
+  border-radius: 15px;
 }
 
 .links ul li {
@@ -166,3 +170,63 @@ body {
 .links ul li:last-child {
   border-bottom: none;
 }
+
+/* end header */
+
+/* start landing */
+
+.landing {
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.intro-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.intro-text > h1 {
+  color: var(--main-color);
+}
+
+.intro-text > p {
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+/* end landing */
+
+/* start features */
+.features {
+  padding: 30px;
+  background-color: #f6f6f6;
+}
+
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  gap: 35px;
+}
+
+.features .feat i {
+  color: var(--main-color);
+}
+
+.features .feat h3 {
+  font-weight: 800;
+}
+
+.features .feat p {
+  line-height: 1.7;
+  font-size: 17px;
+  color: #777;
+}
+
+/* end features */
